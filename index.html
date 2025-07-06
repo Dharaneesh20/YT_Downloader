@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-youtube"></i> YouTube Downloader</h1>
+            <p>Download videos with your preferred quality</p>
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </header>
+
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input type="text" id="url-input" placeholder="Paste YouTube URL here...">
+                <div class="input-glow"></div>
+            </div>
+            <button id="fetch-btn" class="btn primary-btn pulse-btn">
+                <i class="fas fa-search"></i> 
+                <span>Fetch Formats</span>
+                <div class="btn-ripple"></div>
+            </button>
+        </div>
+
+        <div class="format-selection hidden" id="format-selection">
+            <h2>Select Quality</h2>
+            <!-- Video info will be dynamically inserted here -->
+            <div class="quality-grid">
+                <div class="quality-card ultra-premium" data-quality="8k-hdr">
+                    <div class="quality-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>8K HDR</h3>
+                    <p>Ultra Premium (if available)</p>
+                    <div class="quality-badge">4320p+</div>
+                </div>
+                
+                <div class="quality-card premium" data-quality="8k">
+                    <div class="quality-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>8K</h3>
+                    <p>Maximum Quality</p>
+                    <div class="quality-badge">4320p+</div>
+                </div>
+
+                <div class="quality-card premium" data-quality="4k-hdr">
+                    <div class="quality-icon">
+                        <i class="fas fa-diamond"></i>
+                    </div>
+                    <h3>4K HDR</h3>
+                    <p>Premium HDR</p>
+                    <div class="quality-badge">2160p+</div>
+                </div>
+
+                <div class="quality-card high" data-quality="4k">
+                    <div class="quality-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>4K</h3>
+                    <p>Ultra HD</p>
+                    <div class="quality-badge">2160p</div>
+                </div>
+
+                <div class="quality-card medium" data-quality="fhd">
+                    <div class="quality-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>FHD</h3>
+                    <p>Full HD</p>
+                    <div class="quality-badge">1080p</div>
+                </div>
+
+                <div class="quality-card medium" data-quality="hd">
+                    <div class="quality-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>HD</h3>
+                    <p>High Definition</p>
+                    <div class="quality-badge">720p</div>
+                </div>
+
+                <div class="quality-card basic" data-quality="sd">
+                    <div class="quality-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>SD</h3>
+                    <p>Standard</p>
+                    <div class="quality-badge">480p</div>
+                </div>
+
+                <div class="quality-card audio" data-quality="audio">
+                    <div class="quality-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Audio</h3>
+                    <p>Best Quality Audio</p>
+                    <div class="quality-badge">AAC/M4A</div>
+                </div>
+            </div>
+            
+            <div class="merge-options">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="merge-toggle" checked>
+                    <span class="slider">
+                        <i class="fas fa-layer-group"></i>
+                    </span>
+                    <span class="toggle-label">Merge Video + Audio (Best Quality)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="download-progress hidden" id="download-progress">
+            <div class="progress-container">
+                <h2>Processing...</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                    <div class="progress-glow"></div>
+                </div>
+                <p id="progress-text">Initializing...</p>
+                <div class="download-animation">
+                    <div class="download-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                </div>
+                <!-- Download controls will be inserted here dynamically -->
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>Download History</h2>
+            <div id="history-list" class="history-list">
+                <p class="empty-history">No downloads yet</p>
+            </div>
+            <div class="history-actions">
+                <button id="open-folder-btn" class="btn secondary-btn">
+                    <i class="fas fa-folder-open"></i> Open Downloads Folder
+                </button>
+                <button id="clear-history-btn" class="btn danger-btn">
+                    <i class="fas fa-trash"></i> Clear History
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by yt-dlp & ffmpeg | By RSD | <a href="#" id="update-btn">Check for Updates | </a> <a href="www.github.com/Dharaneesh20" id="www.github.com/Dharaneesh20">Follow on GitHUB</a></p></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
