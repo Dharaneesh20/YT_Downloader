@@ -1,5 +1,3 @@
----
-
 # 📥 YouTube Downloader Application
 
 A modern and feature-rich web-based YouTube Downloader built with Node.js. Supports 8K/4K/HDR, audio-only, and merged downloads with a sleek dark UI!
