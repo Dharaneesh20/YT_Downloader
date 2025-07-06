@@ -104,10 +104,20 @@ This app uses:
 
 ---
 
+Here's your updated **README** section with added credits to **FFmpeg** and **yt-dlp**:
+
+---
+
 ## 🙌 Credits
 
 Made with ❤️ by **[Dharaneesh R.S](https://github.com/Dharaneesh20)**
 Licensed under MIT.
 
+Special thanks to:
+
+* 🎞️ [**FFmpeg**](https://ffmpeg.org/) – for enabling seamless media processing and merging
+* ⬇️ [**yt-dlp**](https://github.com/yt-dlp/yt-dlp) – for powering high-quality YouTube downloads
+
 ---
+
 
